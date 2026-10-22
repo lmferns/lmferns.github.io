@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Evaluation Report: Critical Decisions Module 1 | Lisa Ferns</title>
+<meta name="description" content="Kirkpatrick evaluation of a branching safety scenario, with sample pilot data.">
+<meta property="og:title" content="Evaluation Report: Critical Decisions Module 1 | Lisa Ferns">
+<meta property="og:description" content="Kirkpatrick evaluation of a branching safety scenario, with sample pilot data.">
+<meta property="og:image" content="https://lmferns.github.io/images/headshot.jpg">
+<meta property="og:url" content="https://lmferns.github.io/evaluation.html">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="nav"><div class="wrap">
+<a class="brand" href="index.html">Lisa Ferns<span>.</span></a>
+<nav aria-label="Main"><a href="ai.html">AI-Enabled Design</a><a href="simulations.html">Simulations</a><a href="process.html">Design Process</a><a href="media.html">Media &amp; Visuals</a><a href="#contact">Contact</a></nav>
+</div></header>
+<main id="main"><section class="page-hero"><div class="wrap"><p class="eyebrow">Critical Decisions · Evaluation</p><h1>Evaluation report: Module 1 pilot</h1><p class="lede">How the branching scenario performed against the targets set in the needs analysis, and the one change the data called for.</p></div></section><style>
+  .viz-root { --surface-1:#ffffff; --text-primary:#1d2a44; --text-secondary:#4a5570; --grid:#e4dfd5; --good:#0ca30c; --warn:#fab219; --crit:#d03b3b; --before:#9aa3b2; --after:#1d2a44; }
+  .viz-card { background:var(--surface-1); border:1px solid var(--line); border-radius:18px; padding:clamp(20px,4vw,40px); margin-bottom:32px; position:relative; }
+  .viz-card h3 { font-size:22px; margin-bottom:6px; }
+  .viz-card .sub { color:var(--text-secondary); margin:0 0 18px; font-size:16px; }
+  .legend { display:flex; gap:18px; flex-wrap:wrap; margin:0 0 14px; font-size:14px; color:var(--text-secondary); }
+  .legend span { display:inline-flex; align-items:center; gap:7px; }
+  .legend i { width:12px; height:12px; border-radius:3px; display:inline-block; }
+  .legend i.dot { border-radius:50%; }
+  .viz svg { width:100%; height:auto; display:block; overflow:visible; }
+  .viz text { font-family:"Source Sans 3",system-ui,sans-serif; }
+  .tip { position:absolute; pointer-events:none; background:#1d2a44; color:#fff; font-size:13px; line-height:1.4; padding:8px 10px; border-radius:8px; opacity:0; transition:opacity .1s; max-width:240px; z-index:5; }
+  details.tbl { margin-top:14px; font-size:15px; }
+  details.tbl summary { cursor:pointer; color:var(--text-secondary); font-weight:600; }
+  details.tbl table { border-collapse:collapse; margin-top:10px; width:100%; }
+  details.tbl th, details.tbl td { text-align:left; padding:6px 10px; border-bottom:1px solid var(--line); }
+  .kpis { display:grid; grid-template-columns:repeat(4,1fr); gap:16px; margin-bottom:32px; }
+  .kpi { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px; }
+  .kpi b { display:block; font-family:Fraunces,Georgia,serif; font-size:34px; line-height:1.1; color:var(--ink); }
+  .kpi span { font-size:15px; color:var(--ink-soft); }
+  .kirk { width:100%; border-collapse:collapse; font-size:16px; }
+  .kirk th { text-align:left; font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--ink-soft); border-bottom:2px solid var(--ink); padding:8px 10px; }
+  .kirk td { padding:10px; border-bottom:1px solid var(--line); vertical-align:top; }
+  .status { font-weight:700; white-space:nowrap; }
+  .status.met::before { content:"\2713  "; color:#0a7d0a; }
+  .status.prog::before { content:"\25CB  "; color:#8a5a10; }
+  .callout { background:var(--accent-soft); border-radius:14px; padding:22px 24px; margin-bottom:32px; }
+  .callout h3 { font-size:20px; margin-bottom:8px; }
+  .callout p { margin:0 0 8px; }
+  .sample-note { font-size:14px; color:var(--ink-soft); font-style:italic; }
+  @media (max-width:760px) { .kpis { grid-template-columns:1fr 1fr; } }
+  @media print { header.nav, #contact, .next, .tip, details.tbl { display:none !important; } body { background:#fff; } .viz-card, .kpi { break-inside:avoid; } }
+</style>
+
+<section class="block"><div class="wrap">
+  <p class="sample-note">Sample data from a simulated pilot of 24 technicians, created to demonstrate the evaluation process. Company, people and results are fictional.</p>
+
+  <div class="kpis">
+    <div class="kpi"><b>92%</b><span>said the module was relevant to their job (Level 1)</span></div>
+    <div class="kpi"><b>+1.6</b><span>average confidence gain on a 5-point scale (Level 1)</span></div>
+    <div class="kpi"><b>33% &rarr; 10%</b><span>unsafe first choices at decision 1.07 after one content revision (Level 2)</span></div>
+    <div class="kpi"><b>19 of 20</b><span>observed lockouts complete at 30 days (Level 3)</span></div>
+  </div>
+
+  <div class="viz-card viz-root" id="card-choices">
+    <h3>One in three technicians bypassed verification on the first try</h3>
+    <p class="sub">First-attempt choice at each Module 1 decision, share of 24 technicians</p>
+    <div class="legend"><span><i style="background:var(--good)"></i>Best choice</span><span><i style="background:var(--warn)"></i>Costly choice</span><span><i style="background:var(--crit)"></i>Unsafe choice</span></div>
+    <div class="viz" id="chart-choices"></div>
+    <div class="tip"></div>
+    <details class="tbl"><summary>View as table</summary>
+      <table><thead><tr><th>Decision</th><th>Best</th><th>Costly</th><th>Unsafe</th></tr></thead>
+      <tbody><tr><td>1.05 First action before work</td><td>15</td><td>3</td><td>6</td></tr><tr><td>1.07 Step after lock and tag</td><td>16</td><td>0</td><td>8</td></tr><tr><td>1.09 Open E-stop chain, blown fuse</td><td>13</td><td>6</td><td>5</td></tr></tbody></table>
+    </details>
+  </div>
+
+  <div class="callout">
+    <h3>What the data changed</h3>
+    <p>At decision 1.07, 8 of 24 technicians started the repair once their lock was on, without testing for voltage. The procedure screen before it covered the five lockout steps, but never said that a lock does not remove stored energy.</p>
+    <p>The procedure screen was revised to name stored energy and capacitors explicitly. In a second sample cohort of 20, unsafe first-attempt choices at 1.07 fell from 8 of 24 (33%) to 2 of 20 (10%).</p>
+  </div>
+
+  <div class="viz-card viz-root" id="card-conf">
+    <h3>Confidence rose most on refusing to skip a safety step</h3>
+    <p class="sub">Average self-rated confidence before and after Module 1, 1 = not confident, 5 = very confident</p>
+    <div class="legend"><span><i class="dot" style="background:var(--before)"></i>Before</span><span><i class="dot" style="background:var(--after)"></i>After</span></div>
+    <div class="viz" id="chart-conf"></div>
+    <div class="tip"></div>
+    <details class="tbl"><summary>View as table</summary>
+      <table><thead><tr><th>Statement</th><th>Before</th><th>After</th></tr></thead>
+      <tbody><tr><td>I can lock out a system while someone is waiting</td><td>2.8</td><td>4.4</td></tr><tr><td>I can troubleshoot a system that won't stay on</td><td>2.5</td><td>4.1</td></tr><tr><td>I can refuse a request to skip a safety step</td><td>2.6</td><td>4.5</td></tr></tbody></table>
+    </details>
+  </div>
+
+  <div class="viz-card">
+    <h3>Results against targets</h3>
+    <p class="sub">Targets were set before launch, in the needs analysis.</p>
+    <div class="kirk-wrap" style="overflow-x:auto"><table class="kirk">
+      <thead><tr><th>Level</th><th>Measure</th><th>Target</th><th>Result</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>1 Reaction</td><td>Relevance to the job</td><td>80% agree</td><td>92% (22 of 24)</td><td class="status met">Met</td></tr>
+        <tr><td>2 Learning</td><td>Capstone passed on first or second attempt</td><td>85%</td><td>88% (21 of 24)</td><td class="status met">Met</td></tr>
+        <tr><td>3 Behavior</td><td>Complete lockouts on supervisor ride-alongs, 30 days</td><td>90%</td><td>95% (19 of 20)</td><td class="status met">Met</td></tr>
+        <tr><td>3 Behavior</td><td>Ride-along checklist, 90 days</td><td>90%</td><td>Scheduled</td><td class="status prog">In progress</td></tr>
+        <tr><td>4 Results</td><td>Near-misses and repeat calls tied to energy control</td><td>30% fewer in 12 months</td><td>Reviewed quarterly</td><td class="status prog">In progress</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</div></section>
+
+<script>
+(function(){
+  const NS='http://www.w3.org/2000/svg';
+  const el=(t,a)=>{const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);return e;};
+  function tipFor(card){
+    const tip=card.querySelector('.tip');
+    return {show(html,evt){tip.innerHTML=html;tip.style.opacity=1;const r=card.getBoundingClientRect();let x=evt.clientX-r.left+14,y=evt.clientY-r.top-10;if(x+250>r.width)x=evt.clientX-r.left-250;tip.style.left=x+'px';tip.style.top=y+'px';},hide(){tip.style.opacity=0;}};
+  }
+  // Chart 1: 100% stacked bars
+  const rows=[{label:'1.05 First action before work',best:15,costly:3,unsafe:6},{label:'1.07 Step after lock and tag',best:16,costly:0,unsafe:8},{label:'1.09 Open E-stop chain, blown fuse',best:13,costly:6,unsafe:5}];
+  const segs=[['best','Best choice','var(--good)','#fff'],['costly','Costly choice','var(--warn)','#1d2a44'],['unsafe','Unsafe choice','var(--crit)','#fff']];
+  const c1=document.getElementById('chart-choices'),card1=document.getElementById('card-choices'),t1=tipFor(card1);
+  const W=760,L=0,R=760,barH=30,rowH=78;
+  const svg=el('svg',{viewBox:`0 0 ${W} ${rows.length*rowH}`,role:'img','aria-label':'Stacked bars of first-attempt choices for three decisions'});
+  rows.forEach((r,i)=>{
+    const n=r.best+r.costly+r.unsafe, y=i*rowH+26;
+    const lab=el('text',{x:0,y:y-9,'font-size':15,'font-weight':600,fill:'var(--text-primary)'});lab.textContent=r.label;svg.appendChild(lab);
+    const clip=el('clipPath',{id:'clip'+i});clip.appendChild(el('rect',{x:L,y:y,width:R-L,height:barH,rx:4}));svg.appendChild(clip);
+    const g=el('g',{'clip-path':`url(#clip${i})`});svg.appendChild(g);
+    let x=L;
+    segs.forEach(([k,name,col,ink])=>{
+      const v=r[k]; if(!v)return;
+      const w=(R-L)*v/n, pct=Math.round(v/n*100);
+      const rect=el('rect',{x:x,y:y,width:Math.max(0,w-2),height:barH,fill:col});
+      g.appendChild(rect);
+      if(w>44){const t=el('text',{x:x+10,y:y+barH/2+5,'font-size':14,'font-weight':700,fill:ink});t.textContent=pct+'%';svg.appendChild(t);}
+      const hit=el('rect',{x:x,y:y-6,width:w,height:barH+12,fill:'transparent'});
+      hit.addEventListener('mousemove',e=>t1.show(`<b>${name}</b><br>${r.label}<br>${v} of ${n} technicians (${pct}%)`,e));
+      hit.addEventListener('mouseleave',t1.hide);
+      svg.appendChild(hit);
+      x+=w;
+    });
+  });
+  c1.appendChild(svg);
+
+  // Chart 2: dumbbell
+  const items=[{label:'I can lock out a system while someone is waiting',b:2.8,a:4.4},{label:"I can troubleshoot a system that won't stay on",b:2.5,a:4.1},{label:'I can refuse a request to skip a safety step',b:2.6,a:4.5}];
+  const c2=document.getElementById('chart-conf'),card2=document.getElementById('card-conf'),t2=tipFor(card2);
+  const W2=760,x0=20,x1=740,rh=74,top=34;
+  const X=v=>x0+(v-1)/4*(x1-x0);
+  const s2=el('svg',{viewBox:`0 0 ${W2} ${top+items.length*rh+8}`,role:'img','aria-label':'Confidence before and after for three statements'});
+  [1,2,3,4,5].forEach(v=>{s2.appendChild(el('line',{x1:X(v),x2:X(v),y1:top-6,y2:top+items.length*rh-14,stroke:'var(--grid)','stroke-width':1}));const t=el('text',{x:X(v),y:18,'text-anchor':'middle','font-size':13,fill:'var(--text-secondary)'});t.textContent=v;s2.appendChild(t);});
+  items.forEach((it,i)=>{
+    const y=top+i*rh+34;
+    const lab=el('text',{x:x0,y:y-18,'font-size':15,'font-weight':600,fill:'var(--text-primary)'});lab.textContent=it.label;s2.appendChild(lab);
+    s2.appendChild(el('line',{x1:X(it.b),x2:X(it.a),y1:y,y2:y,stroke:'var(--before)','stroke-width':2}));
+    [[it.b,'var(--before)','Before'],[it.a,'var(--after)','After']].forEach(([v,col,nm])=>{
+      const c=el('circle',{cx:X(v),cy:y,r:7,fill:col,stroke:'var(--surface-1)','stroke-width':2});s2.appendChild(c);
+      const t=el('text',{x:X(v),y:y+24,'text-anchor':'middle','font-size':13,'font-weight':nm==='After'?700:400,fill:nm==='After'?'var(--text-primary)':'var(--text-secondary)'});t.textContent=v.toFixed(1);s2.appendChild(t);
+      const hit=el('circle',{cx:X(v),cy:y,r:16,fill:'transparent'});
+      hit.addEventListener('mousemove',e=>t2.show(`<b>${nm}: ${v.toFixed(1)}</b><br>${it.label}`,e));hit.addEventListener('mouseleave',t2.hide);s2.appendChild(hit);
+    });
+  });
+  c2.appendChild(s2);
+})();
+</script>
+<div class="wrap next"><a href="critical-decisions.html">&larr; Back to the case study</a></div></main>
+<section id="contact"><div class="wrap">
+<h2>Let's talk.</h2>
+<p>My full portfolio, including detailed case studies is available by request. Reach out below and I'll be glad to share it.</p>
+<p class="email"><a href="mailto:lmferns@gmail.com">lmferns@gmail.com</a></p>
+<div class="btns">
+<a class="btn solid" href="mailto:lmferns@gmail.com">Email me</a>
+<a class="btn ghost" href="https://www.linkedin.com/in/lisaferns/" target="_blank" rel="noopener">LinkedIn</a>
+<a class="btn ghost" href="resume/Lisa-Ferns-Resume.pdf" target="_blank" rel="noopener">Download my resume</a>
+</div>
+<div class="foot">&copy; 2026 Lisa Ferns</div>
+</div></section>
+</body>
+</html>
